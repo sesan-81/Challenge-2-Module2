@@ -1,18 +1,69 @@
 # Challenge2-Refactoring Code in VBA
-PROJECT OVERVIEW
+
+1.	OVERVIEW OF THE ANALYSIS
+
+Steve had previously requested that I make a workbook for his parents so they may analyze some green stocks from 2017 and 2018. The previous workbook had included the total daily volume of the stock sales as well as their average yearly returns at the click of a button. Steve loved the workbook and now wants to be able to do research on the entire stock market over the last few years.
+
+     PURPOSE OF THE ANALYSIS
+     
 The purpose of this analysis is to refactor the module 2 solution code in order for it to run faster and shorter than it did. It must be made to loop through all of the stock data one time to collect information on each stock's total daily volume and the return. Moreover, the new analysis run time and evaluation must be compared to the run time of the subroutine before refactoring.
-RESULTS
-In 2017, TERP had a negative low percentage of return as indicated by "red". In 2018 however, only ENPR and RUN had positive percentage return while others had negative percentage. almost all of the stocks had a negative percent return. 
 
-Summary
-* ADVANTAGE
-It reduces execution time hugely and somewhat more efficient in nature.
+2.	RESULTS
 
-* DISADVANTAGE
-Codes that are complex can be difficult to arrange. Also, a change to a line of code may alter the whole result.
+For this refactored code, I created the ticker(tickerIndex) variable and set it equal to zero before iterating over all the rows. Using the same ticker(tickerIndex), I accessed the correct index across the four different arrays I used: the tickers array and the three output arrays which are tickerVolumes, tickerStartingPrices and tickerEndingPrices. 
 
-PROS AND CONS
-Codes can easily be changed, understood and maintained if attentions are paid to the refactoring processes
+The first 'for' loop was to initialize the   tickerVolumes(tickerIndex)  to zero and subsequently the loop will loop over all the rows in the spreadsheet. Inside the previous 'for' loop I wrote a script that increases the current tickerVolumes(tickerIndex) (stock ticker volume) variable and adds the ticker volume for the current volume for the current stock ticker.
+
+ I used the ticker (Index v)ariable as the index. Using row numbering with the selected ticker(tickerIndex), I later used if-then statements to assign tickerStartingPrices and tickerEndingPrices. Using a 'for' loop through the 4 arrayes, I gave the output assignments as "Ticker", "Total Daily Volume" and "Return"
+The images for 2017 and 2018 are displayed below:![image](https://user-images.githubusercontent.com/104377031/186790449-9af1d21d-d1aa-4bbb-91ec-e769729a5fc6.png)
+
+
+![image](https://user-images.githubusercontent.com/104377031/186790466-90a07457-cb83-4876-b827-40cb8c75da41.png)
+ 
+
+
+
+
+
+
+
+                                                                                                                                    
+
+
+
+
+
+
+
+![Uploading image.png…]()
+
+ 
+ 
+ 
+ 
+ 
+
+                                                                                                                                      
+
+3.	 Summary
+
+Based on my experience with this project, I have observed that there are both advantages and disadvantages of refactoring code in general. I found working with an original script more rewarding as it gave a 'clean slate' for creativity. Refactoring seemed to constrict the process and at times, frustrating when trying to maneauver the code or sticking to refactoring instructions, such as variable names I would have otherwise not chosen (tickerVolume vs. totalVolume).
+
+In 2017, TERP had a negative low percentage of return as indicated by "red". 
+ 
+In 2018 however, only ENPR and RUN had positive percentage return while others had negative percentage. almost all of the stocks had a negative percent return. 
+
+(A)	 ADVANTAGE
+
+•	The main advantage of refactoring would be that it gives the data analyst a template to work with.
+
+•	It reduces execution time hugely and somewhat more efficient in nature.
+
+(B)	DISADVANTAGE
+
+•	The disadvantage can be seen in new challenges, such as having to recreate a button as it stopped working.
+
+•	Complex codes used were very difficult to arrange. Also, a change to a line of code were alter the whole result and adequate care was taken to ensure no alterations were made while handling the complex codes.
 
 
 
